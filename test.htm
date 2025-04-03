@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeautySkin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 5%;
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .logo {
+      font-weight: bold;
+      font-size: 1.8rem;
+      color: #333;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    
+    .nav-links li {
+      margin-left: 2.5rem;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: #ff6b6b;
+    }
+    
+    /* Hero Section (Home) */
+    #home {
+      padding: 10rem 5% 6rem;
+      text-align: left;
+      background-color: #f9f9f9;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    
+    .hero-content {
+      max-width: 600px;
+    }
+    
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    
+    .hero h1 span {
+      display: block;
+    }
+    
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+      color: #666;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background-color: #ff6b6b;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    
+    .btn:hover {
+      background-color: #ff5252;
+    }
+    
+    /* About Us (Product Category) */
+    #about {
+      padding: 6rem 5%;
+      text-align: center;
+      background-color: #fff;
+    }
+    
+    #about h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+      color: #333;
+    }
+    
+    .category {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff6b6b;
+      margin-top: 2rem;
+    }
+    
+    /* Services */
+    #services {
+      padding: 6rem 5%;
+      background-color: #f9f9f9;
+    }
+    
+    #services h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+      color: #333;
+      text-align: center;
+    }
+    
+    .service {
+      margin-bottom: 3rem;
+    }
+    
+    .service h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #ff6b6b;
+    }
+    
+    .service p {
+      margin-bottom: 1.5rem;
+      color: #666;
+    }
+    
+    /* Testimonials */
+    #testimonials {
+      padding: 6rem 5%;
+      background-color: #fff;
+      text-align: center;
+    }
+    
+    #testimonials h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+      color: #333;
+    }
+    
+    .testimonial {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+    }
+    
+    .testimonial p {
+      font-style: italic;
+      margin-bottom: 1rem;
+      color: #666;
+    }
+    
+    .testimonial .author {
+      font-weight: bold;
+      color: #333;
+    }
+    
+    /* Products */
+    #products {
+      padding: 6rem 5%;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+    
+    #products h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+      color: #333;
+    }
+    
+    .product {
+      display: inline-block;
+      max-width: 300px;
+      margin: 0 1.5rem 3rem;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .product h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+    
+    .product .price {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #ff6b6b;
+      margin: 1rem 0;
+    }
+    
+    .product .btn {
+      display: block;
+      margin-top: 1.5rem;
+    }
+    
+    /* Contact Us */
+    #contact {
+      padding: 6rem 5%;
+      background-color: #333;
+      color: #fff;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .footer-section {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #ff6b6b;
+    }
+    
+    .footer-section ul {
+      list-style: none;
+    }
+    
+    .footer-section ul li {
+      margin-bottom: 0.8rem;
+    }
+    
+    .footer-section ul li a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-section ul li a:hover {
+      color: #ff6b6b;
+    }
+    
+    .contact-info {
+      margin-bottom: 1.5rem;
+    }
+    
+    .contact-info p {
+      margin-bottom: 0.5rem;
+      color: #ccc;
+    }
+    
+    .social-links a {
+      display: inline-block;
+      margin-right: 1rem;
+      color: #ccc;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+    
+    .social-links a:hover {
+      color: #ff6b6b;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid #444;
+      margin-top: 2rem;
+      color: #ccc;
+    }
+    
+    .footer-bottom a {
+      color: #ff6b6b;
+      text-decoration: none;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav {
+        padding: 1rem 5%;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .footer-section {
+        flex: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">BeautySkin</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="hero-content">
+      <h1>
+        <span>REVEAL YOUR</span>
+        <span>BEAUTY with</span>
+        <span>SKINCARE</span>
+      </h1>
+      <p>
+        Philosophy<br>
+        It is a long established fact that a reader will be
+        distracted by the readable content of a page
+        when looking at its layout. The point of using
+        Lorem Ipsum is that it has a more-or-less
+      </p>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about">
+    <h2>our PRODUCT CATEGORY</h2>
+    <div class="category">BABY</div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>service YOUTHFULSKIN</h2>
+    <div class="service">
+      <h3>Whitening Program</h3>
+      <p>It is a long established fact that a reader will be distracted by the readable content of a page when reading at its layout.</p>
+      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+    </div>
+    <div class="service">
+      <h3>Book Care Spa</h3>
+      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products">
+    <h2>PRODUCT bestseller</h2>
+    <div class="product">
+      <h3>DR.RASHEL</h3>
+      <p>KIND TO SKIN</p>
+      <p>Brightening & Hydrating</p>
+      <p>VITAMINC</p>
+      <div class="price">GHS 60.00</div>
+      <a href="#" class="btn">ADD TO BUY</a>
+    </div>
+    <div class="product">
+      <h3>BROTH FACIAL CREAM</h3>
+      <div class="price">GHS 45.00</div>
+      <a href="#" class="btn">ADD TO BUY</a>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <h2>WHAT CUSTOMER SAYS...</h2>
+    <div class="testimonial">
+      <p>"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"</p>
+      <div class="author">Adeline</div>
+    </div>
+    <div class="testimonial">
+      <p>"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"</p>
+      <div class="author">Ria</div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Product</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonial</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Keep in Touch</h3>
+        <div class="contact-info">
+          <p>youthfulskin@gmail.com</p>
+          <p>UNIVERSITY OF ENERGY AND NATURAL RESOURCES</p>
+          <p>+233245390707</p>
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Operating Hours</h3>
+        <p>from 8am to 6pm</p>
+        <p>Monday-Sunday</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright © 2025. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Terms Of Use</a></p>
+    </div>
+  </section>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Mobile menu toggle (can be added later)
+    console.log('Website loaded successfully');
+  </script>
+</body>
+</html>
