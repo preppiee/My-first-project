@@ -7,6 +7,8 @@ Welcome to **YouthfulSkin**—a visually stunning, responsive skincare website.
 - Responsive design  
 - Interactive navigation  
 - Dynamic features
+## Project description
+This website was created to help women have easy access to skincare products and skincare advice
   
 ## Roadmap
 - [ ] Add new skincare products page.
@@ -18,7 +20,12 @@ Have questions or feedback?
 Email me: [apekeagnes@gmail.com] 
 
 
+Contributions are welcome. Please fork this repository and submit pull up request.
+
+
 ## Installation  
+git clone https://github.com/preppiee/YouthfulSkin.git  
+cd YouthfulSkin  
 ```bash
 git clone https://github.com/preppiee/YouthfulSkin.git
 cd YouthfulSkin
