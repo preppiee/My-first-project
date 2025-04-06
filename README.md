@@ -24,9 +24,9 @@ Contributions are welcome. Please fork this repository and submit pull up reques
 
 
 ## Installation  
-git clone https://github.com/preppiee/YouthfulSkin.git  
-cd YouthfulSkin  
+git clone https://github.com/preppiee/My-first-project.git  
+cd  My-first-project
 ```bash
-git clone https://github.com/preppiee/YouthfulSkin.git
-cd YouthfulSkin
+git clone https://github.com/preppiee/My-first-project.git
+cd My-first-project
 
